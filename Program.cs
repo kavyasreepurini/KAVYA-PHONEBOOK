@@ -1,16 +1,17 @@
 ﻿ using System;
-using contacts;
+//using contacts;
 using System.Collections.Generic;
-using console;
+//using console;
 
-namespace phonebook
+namespace kavyaphonebook
 {
     class Program
     {
-        static void Main(string[] args)
+         consoleHandler handler = new consoleHandler();
+        public void Main(string[] args)
         {
              PhoneBook phonebook = new PhoneBook();
-             listMenu();
+             handler.listMenu(int selection);
              
             
              switch (selection)
@@ -21,10 +22,10 @@ namespace phonebook
                        break;
              case 3: phonebook.EditContact();
                        break;
-             case 5: phonebook.getContacts();
-                       break;
-             case 4: phonebook.searchContact();
-                       break;
+            // case 5: phonebook.getContacts();
+                      // break;
+             //case 4: phonebook.searchContact();
+                      // break;
 
              }         
        }
@@ -32,5 +33,5 @@ namespace phonebook
 
     
 }
-© 2019 GitHub, Inc.
+
 
