@@ -10,11 +10,14 @@ namespace kavyaphonebook
          consoleHandler handler = new consoleHandler();
         public void Main(string[] args)
         {
-             PhoneBook phonebook = new PhoneBook();
-             handler.listMenu(int selection);
+             //PhoneBook phonebook = new PhoneBook();
              
-             SelectionSwitch switchSelection = new SelectionSwitch();
-             SelectionSwitch.SelectionMethod(selection);
+             
+           int  Option =  handler.listMenu(int selection);
+             
+             
+             SelectionSwitch selectionSwitch = new SelectionSwitch();
+             selectionSwitch.SelectionMethod(Option);
              
                      
        }
