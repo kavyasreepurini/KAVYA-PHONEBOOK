@@ -13,21 +13,10 @@ namespace kavyaphonebook
              PhoneBook phonebook = new PhoneBook();
              handler.listMenu(int selection);
              
-            
-             switch (selection)
-             {
-             case 1: phonebook.AddContact();
-                     break;
-             case 2: phonebook.DeleteContact();
-                       break;
-             case 3: phonebook.EditContact();
-                       break;
-            // case 5: phonebook.getContacts();
-                      // break;
-             //case 4: phonebook.searchContact();
-                      // break;
-
-             }         
+             SelectionSwitch switchSelection = new SelectionSwitch();
+             SelectionSwitch.SelectionMethod(selection);
+             
+                     
        }
     }   
 
