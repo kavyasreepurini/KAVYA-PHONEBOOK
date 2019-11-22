@@ -1,26 +1,50 @@
 using System.Collections.Generic;
 using kavyaphonebook;
+using System;
 
 public class PhoneBook
      {  
          List<Contact> contacts = new List<Contact>();
-        Contact contact = new Contact();
+        
         consoleHandler handler = new consoleHandler();
+        Contact contact = new Contact();
+        ContactsJson contactsJson = new ContactsJson();
 
      public  void AddContact()
         { 
-           handler.getContact(contact);
-            contacts.Add(contact);
+           
+            
+            contacts.Add(handler.getContact(contact));
+            contactsJson.addfile(contacts);
+
+             
+
+
         }
 
-    public   void DeleteContact()
+     public   void DeleteContact()
        {
-         handler.delContact( (List<Contact> contacts);
-         contacts.Remove(contactName);       
+          Contact DeleteName = handler.delContact(contacts);
+          contacts.Remove(DeleteName);       
           
        }
 
-    public void EditContact() => handler.editName(List <Contact> contacts);
+     //public void addfile()
+       //{
+         //contactsJson.addfile(contacts);
+       //}
+
+
+
+    public void EditContact() => handler.editName(contacts);
+    
+    
+    
+    
+    
+    
+    
+    
     // public void searchContact()
     //{
     // Console.WriteLine("enter the name to search ") ;
