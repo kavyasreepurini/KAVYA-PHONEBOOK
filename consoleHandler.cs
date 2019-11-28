@@ -1,13 +1,13 @@
-using System;
+ using System;
 using kavyaphonebook;
 using System.Collections.Generic; 
 
 
     public class consoleHandler{
-    public int listMenu(int selection ){
-        Console.WriteLine("enter your option 1.add\n 2.delete 3.edit 4.search conatct 5.Get all contact");
-         selection = int.Parse(Console.ReadLine());
-        return selection;
+    public int listMenu( ){
+         Console.WriteLine("enter your option 1.add\n 2.delete 3.edit 4.search conatct 5.Get all contact");
+         int selection = int.Parse(Console.ReadLine());
+         return selection;
     } 
     
     public Contact getContact(Contact contact){
@@ -31,9 +31,9 @@ using System.Collections.Generic;
 
           Console.WriteLine("enter the name to be deleted") ;
           string Name = Console.ReadLine();
-         Contact contactName =  contacts.Find(item => item.FirstName == Name);
+          Contact contactName =  contacts.Find(item => item.FirstName == Name);
         // contacts.Remove(contactName);
-        return contactName;
+          return contactName;
           
     }
 
@@ -54,10 +54,8 @@ using System.Collections.Generic;
                contacts[i].FirstName = newName;
                break;
         }
-        return; 
+             return; 
     }      
 
-    //foreach ( var person in contacts){
-    //Console.WriteLine("Name : "+person.firstName+" "+person.lastName+",PhoneNumber :"+person.phoneNumber+", Email Id:"+person.emailId); );
-    //}
+    
  }

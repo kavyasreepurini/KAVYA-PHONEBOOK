@@ -4,39 +4,46 @@ using System;
 
 public class PhoneBook
      {  
-         List<Contact> contacts = new List<Contact>();
+      List<Contact> contacts = new List<Contact>();
+      Contact contact = new Contact();
+      JsonHandler jsonhandler = new JsonHandler();
+
+      consoleHandler handler = new consoleHandler();
         
-        consoleHandler handler = new consoleHandler();
-        Contact contact = new Contact();
-        ContactsJson contactsJson = new ContactsJson();
 
-     public  void AddContact()
-        { 
-           
-            
-            contacts.Add(handler.getContact(contact));
-            contactsJson.addfile(contacts);
+              public  void AddContact(Contact ContactDetails)
+              {
+               contacts.Add(ContactDetails);
+               return;
+               
+              }
 
-             
+              public List<Contact> display()
+              {
+                return contacts;
+              }
 
-
-        }
-
-     public   void DeleteContact()
-       {
-          Contact DeleteName = handler.delContact(contacts);
-          contacts.Remove(DeleteName);       
+              public   void DeleteContact(Contact DeleteName)
+             {
+              contacts.Remove(DeleteName);       
           
+             }
+
+             public void addfile()
+            {
+              jsonhandler.addfile(contacts);
+            }
+
+
+
+           public void EditContact() => handler.editName(contacts);
+
+           public void contactList(){
+               foreach ( Contact person in contacts){
+             Console.WriteLine("Name :" +person.FirstName +person.LastName  +"PhoneNumber :"+person.PhoneNumber +"\nEmail Id:" +person.mailid);
+           }
+
        }
-
-     //public void addfile()
-       //{
-         //contactsJson.addfile(contacts);
-       //}
-
-
-
-    public void EditContact() => handler.editName(contacts);
     
     
     
@@ -54,12 +61,6 @@ public class PhoneBook
 
     //}
 
-    //public void getContacts()
-     //{
-      // foreach ( var person in contacts)
-
     
-
-     //}
 
     }
