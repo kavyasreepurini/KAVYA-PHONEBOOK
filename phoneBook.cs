@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using kavyaphonebook;
+using Kavya.Phonebook;
 using System;
 
 public class PhoneBook
@@ -8,7 +8,7 @@ public class PhoneBook
       Contact contact = new Contact();
       JsonHandler jsonhandler = new JsonHandler();
 
-      consoleHandler handler = new consoleHandler();
+      ConsoleHandler handler = new ConsoleHandler();
         
 
               public  void AddContact(Contact ContactDetails)
@@ -31,16 +31,16 @@ public class PhoneBook
 
              public void addfile()
             {
-              jsonhandler.addfile(contacts);
+              jsonhandler.exportToFile(contacts);
             }
 
 
 
            public void EditContact() => handler.editName(contacts);
 
-           public void contactList(){
+           public void PrintContactList(){
                foreach ( Contact person in contacts){
-             Console.WriteLine("Name :" +person.FirstName +person.LastName  +"PhoneNumber :"+person.PhoneNumber +"\nEmail Id:" +person.mailid);
+             Console.WriteLine("Name :" +person.FirstName +person.LastName  +"PhoneNumber :"+person.PhoneNumber +"\nEmail Id:" +person.MailId);
            }
 
        }

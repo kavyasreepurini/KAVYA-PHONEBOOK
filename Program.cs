@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 
 
-namespace kavyaphonebook
+namespace Kavya.Phonebook
 {
     class Program
     {
         
         public static void Main(string[] args)
         {
-           consoleHandler handler = new consoleHandler();
+           ConsoleHandler handler = new ConsoleHandler();
            PhoneBook phonebook = new PhoneBook();
            Contact contact = new Contact();
            
          
            int  Option =  handler.listMenu();
            callswitch(Option);
-           phonebook.contactList();
+           phonebook.PrintContactList();
            phonebook.addfile();
 
          void callswitch(int option)
@@ -24,13 +24,13 @@ namespace kavyaphonebook
                 switch (Option)
               {
                  case 1:
-                  Contact ContactDetails = handler.getContact( contact);
-                  phonebook.AddContact(ContactDetails);
+                  Contact ContactToAdd = handler.getContact( contact);
+                  phonebook.AddContact(ContactToAdd);
                   break;
 
                 case 2:
-                 Contact DeleteName = handler.delContact(phonebook.display());
-                 phonebook.DeleteContact(DeleteName);
+                 Contact ContactToDelete = handler.deleteContact(phonebook.display());
+                 phonebook.DeleteContact(ContactToDelete);
                  break;
 
                 case 3:

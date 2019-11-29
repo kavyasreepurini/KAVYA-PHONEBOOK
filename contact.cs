@@ -1,15 +1,15 @@
 using System;
-using kavyaphonebook;
+using Kavya.Phonebook;
 
-//namespace contacts
+
 
 
    public class Contact
     {
-        public string FirstName{get;set;}
-        public string LastName{get;set;}
-        public double PhoneNumber {get;set;}
-        public string mailid {get;set;}
+        public string FirstName{get; set;}
+        public string LastName{get; set;}
+        public double PhoneNumber {get; set;}
+        public string MailId {get; set;}
     }  
       
  
