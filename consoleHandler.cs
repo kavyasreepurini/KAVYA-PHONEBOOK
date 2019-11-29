@@ -1,13 +1,14 @@
-using System;
-using kavyaphonebook;
+ using System;
+using Kavya.Phonebook;
 using System.Collections.Generic; 
 
 
-    public class consoleHandler{
-    public int listMenu(int selection ){
-        Console.WriteLine("enter your option 1.add\n 2.delete 3.edit 4.search conatct 5.Get all contact");
-         selection = int.Parse(Console.ReadLine());
-        return selection;
+    public class ConsoleHandler{
+
+    public int selectMenutItem( ){
+         Console.WriteLine("enter your option 1.add\n 2.delete\n 3.edit\n 4.search contact\n 5.Get all contact\n");
+         int selection = int.Parse(Console.ReadLine());
+         return selection;
     } 
     
     public Contact getContact(Contact contact){
@@ -22,18 +23,17 @@ using System.Collections.Generic;
           contact.PhoneNumber = Convert.ToDouble(Console.ReadLine());
 
           Console.WriteLine("enter the mailid");
-          contact.mailid = Console.ReadLine();
+          contact.MailId = Console.ReadLine();
 
           return contact;
     }
-    public Contact delContact(List<Contact> contacts){
+    public Contact deleteContact(List<Contact> contacts){
        // MyClass item = MyList.Find(item => item.name == "foo");
 
           Console.WriteLine("enter the name to be deleted") ;
           string Name = Console.ReadLine();
-         Contact contactName =  contacts.Find(item => item.FirstName == Name);
-        // contacts.Remove(contactName);
-        return contactName;
+          Contact contact =  contacts.Find(item => item.FirstName == Name);
+          return contact;
           
     }
 
@@ -46,7 +46,7 @@ using System.Collections.Generic;
            // return ;
            Console.WriteLine("Enter the FirstName to be edited");
            string Name = Console.ReadLine();
-           Console.WriteLine("Enter the newName ");
+           Console.WriteLine("Enter the New name ");
            string newName = Console.ReadLine();
            for(int i=0;i<contacts.Count;i++)
         {
@@ -54,10 +54,8 @@ using System.Collections.Generic;
                contacts[i].FirstName = newName;
                break;
         }
-        return; 
+             return; 
     }      
 
-    //foreach ( var person in contacts){
-    //Console.WriteLine("Name : "+person.firstName+" "+person.lastName+",PhoneNumber :"+person.phoneNumber+", Email Id:"+person.emailId); );
-    //}
+    
  }

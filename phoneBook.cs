@@ -1,26 +1,57 @@
 using System.Collections.Generic;
-using kavyaphonebook;
+using Kavya.Phonebook;
+using System;
 
 public class PhoneBook
      {  
-         List<Contact> contacts = new List<Contact>();
-        Contact contact = new Contact();
-        consoleHandler handler = new consoleHandler();
+      List<Contact> contacts = new List<Contact>();
+      Contact contact = new Contact();
+      JsonHandler jsonhandler = new JsonHandler();
 
-     public  void AddContact()
-        { 
-           handler.getContact(contact);
-            contacts.Add(contact);
-        }
+      ConsoleHandler handler = new ConsoleHandler();
+        
 
-    public   void DeleteContact()
-       {
-         handler.delContact( (List<Contact> contacts);
-         contacts.Remove(contactName);       
+              public  void AddContact(Contact contactToAdd)
+              {
+               contacts.Add(contactToAdd);
+               return;
+               
+              }
+
+              public List<Contact> display()
+              {
+                return contacts;
+              }
+
+              public   void DeleteContact(Contact contactToDelete)
+             {
+              contacts.Remove(contactToDelete);       
           
-       }
+             }
 
-    public void EditContact() => handler.editName(List <Contact> contacts);
+             public void addfile()
+            {
+              jsonhandler.exportToFile(contacts);
+            }
+
+
+
+           public void EditContact() => handler.editName(contacts);
+
+           public void PrintContactList(){
+               foreach ( Contact person in contacts){
+             Console.WriteLine("Name :" +person.FirstName +person.LastName  +"PhoneNumber :"+person.PhoneNumber +"\nEmail Id:" +person.MailId);
+           }
+
+       }
+    
+    
+    
+    
+    
+    
+    
+    
     // public void searchContact()
     //{
     // Console.WriteLine("enter the name to search ") ;
@@ -30,12 +61,6 @@ public class PhoneBook
 
     //}
 
-    //public void getContacts()
-     //{
-      // foreach ( var person in contacts)
-
     
-
-     //}
 
     }
