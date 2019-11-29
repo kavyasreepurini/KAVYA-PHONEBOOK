@@ -14,12 +14,12 @@ namespace Kavya.Phonebook
            Contact contact = new Contact();
            
          
-           int  Option =  handler.listMenu();
-           callswitch(Option);
+           int  Option =  handler.selectMenutItem();
+           callSwitch(Option);
            phonebook.PrintContactList();
            phonebook.addfile();
 
-         void callswitch(int option)
+         void callSwitch(int option)
            {
                 switch (Option)
               {
