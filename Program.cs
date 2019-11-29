@@ -24,7 +24,7 @@ namespace Kavya.Phonebook
                 switch (option)
               {
                  case 1:
-                  Contact contactToAddjjgfhj = handler.getContact( contact);
+                  Contact contactToAdd = handler.getContact( contact);
                   phonebook.AddContact(contactToAdd);
                   break;
 
