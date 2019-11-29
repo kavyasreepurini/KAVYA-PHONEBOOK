@@ -11,9 +11,9 @@ public class PhoneBook
       ConsoleHandler handler = new ConsoleHandler();
         
 
-              public  void AddContact(Contact ContactDetails)
+              public  void AddContact(Contact contactToAdd)
               {
-               contacts.Add(ContactDetails);
+               contacts.Add(contactToAdd);
                return;
                
               }
@@ -23,9 +23,9 @@ public class PhoneBook
                 return contacts;
               }
 
-              public   void DeleteContact(Contact DeleteName)
+              public   void DeleteContact(Contact contactToDelete)
              {
-              contacts.Remove(DeleteName);       
+              contacts.Remove(contactToDelete);       
           
              }
 

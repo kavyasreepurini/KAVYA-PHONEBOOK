@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 
     public class ConsoleHandler{
-       
+
     public int selectMenutItem( ){
          Console.WriteLine("enter your option 1.add\n 2.delete\n 3.edit\n 4.search contact\n 5.Get all contact\n");
          int selection = int.Parse(Console.ReadLine());
@@ -33,7 +33,6 @@ using System.Collections.Generic;
           Console.WriteLine("enter the name to be deleted") ;
           string Name = Console.ReadLine();
           Contact contact =  contacts.Find(item => item.FirstName == Name);
-        // contacts.Remove(contactName);
           return contact;
           
     }
@@ -47,12 +46,12 @@ using System.Collections.Generic;
            // return ;
            Console.WriteLine("Enter the FirstName to be edited");
            string Name = Console.ReadLine();
-           Console.WriteLine("Enter the newName ");
-           string Newname = Console.ReadLine();
+           Console.WriteLine("Enter the New name ");
+           string newName = Console.ReadLine();
            for(int i=0;i<contacts.Count;i++)
         {
              if(contacts[i].FirstName.Contains(Name))
-               contacts[i].FirstName = Newname;
+               contacts[i].FirstName = newName;
                break;
         }
              return; 

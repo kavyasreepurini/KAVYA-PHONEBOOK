@@ -14,23 +14,23 @@ namespace Kavya.Phonebook
            Contact contact = new Contact();
            
          
-           int  Option =  handler.selectMenutItem();
-           callSwitch(Option);
+           int  option =  handler.selectMenutItem();
+           actOnSelectMenu(option);
            phonebook.PrintContactList();
            phonebook.addfile();
 
-         void callSwitch(int option)
+         void actOnSelectMenu(int option)
            {
-                switch (Option)
+                switch (option)
               {
                  case 1:
-                  Contact ContactToAdd = handler.getContact( contact);
-                  phonebook.AddContact(ContactToAdd);
+                  Contact contactToAdd = handler.getContact( contact);
+                  phonebook.AddContact(contactToAdd);
                   break;
 
                 case 2:
-                 Contact ContactToDelete = handler.deleteContact(phonebook.display());
-                 phonebook.DeleteContact(ContactToDelete);
+                 Contact contactToDelete = handler.deleteContact(phonebook.display());
+                 phonebook.DeleteContact(contactToDelete);
                  break;
 
                 case 3:
