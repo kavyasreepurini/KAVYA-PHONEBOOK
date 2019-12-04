@@ -18,13 +18,14 @@ namespace Kavya.Phonebook
            actOnSelectMenu(option);
            phonebook.PrintContactList();
            phonebook.addfile();
+           
 
          void actOnSelectMenu(int option)
            {
                 switch (option)
               {
                  case 1:
-                  Contact contactToAdd = handler.getContact( contact);
+                  Contact contactToAdd = handler.getContact();
                   phonebook.AddContact(contactToAdd);
                   break;
 

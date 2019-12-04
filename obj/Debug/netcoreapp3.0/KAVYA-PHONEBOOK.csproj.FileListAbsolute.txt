@@ -1,0 +1,13 @@
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.csprojAssemblyReference.cache
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.AssemblyInfoInputs.cache
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.AssemblyInfo.cs
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.deps.json
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.runtimeconfig.json
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.runtimeconfig.dev.json
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.dll
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.pdb
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/bin/Debug/netcoreapp3.0/Newtonsoft.Json.dll
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.csproj.CopyComplete
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.dll
+/Users/kavyasree/Documents/kavyaPhonebook/KAVYA-PHONEBOOK/obj/Debug/netcoreapp3.0/KAVYA-PHONEBOOK.pdb

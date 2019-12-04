@@ -6,12 +6,17 @@ using System.Collections.Generic;
     public class ConsoleHandler{
 
     public int selectMenutItem( ){
+       
          Console.WriteLine("enter your option 1.add\n 2.delete\n 3.edit\n 4.search contact\n 5.Get all contact\n");
+
          int selection = int.Parse(Console.ReadLine());
+
          return selection;
     } 
     
-    public Contact getContact(Contact contact){
+    public Contact getContact(){
+
+          Contact contact = new Contact();
 
           Console.WriteLine("enter the firstname ") ;
           contact.FirstName = Console.ReadLine();
